@@ -5,14 +5,12 @@ interface PostState {
     posts: IPost[];
     isLoading: boolean;
     error: string;
-    post: IPost;
 }
 
 const initialState: PostState = {
     posts: [],
     isLoading: false,
     error: '',
-    post: {id: 1, title: '', body: ''},
 }
 
 export const postSlice = createSlice({
@@ -39,11 +37,6 @@ export const postSlice = createSlice({
             state.isLoading = false
             state.error = action.payload
         },
-        postsFetchingByIdSuccess (state, action: PayloadAction<IPost>) {
-            state.isLoading = false
-            state.error = ''
-            state.post = action.payload
-        }
     }
 })
 export default postSlice.reducer;
