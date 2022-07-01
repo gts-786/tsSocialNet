@@ -1,10 +1,15 @@
 import axios from "axios";
 
 export default class QueryPhotos {
-    static async getAll() {
+    static async getAll(limit=10, page=1) {
         const response = await axios.get(
-            'https://jsonplaceholder.typicode.com/photos?albumId=1'
+            'https://jsonplaceholder.typicode.com/photos', {
+                params: {
+                    _limit: limit,
+                    _page: page,
+                }
+            }
         )
-        return response.data;
+        return response;
     }
 }
