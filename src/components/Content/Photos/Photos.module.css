@@ -1,0 +1,7 @@
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1em;
+    padding: 15px;
+    justify-content: center;
+}
