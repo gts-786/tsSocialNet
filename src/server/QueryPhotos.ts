@@ -1,12 +1,12 @@
 import axios from "axios";
 
-export default class QueryPosts {
-    static async getAll(limit = 3, page = 1){
+export default class QueryPhotos {
+    static async getAll(limit=10, page=1) {
         const response = await axios.get(
-            'https://jsonplaceholder.typicode.com/posts', {
+            'https://jsonplaceholder.typicode.com/photos', {
                 params: {
                     _limit: limit,
-                    _page: page
+                    _page: page,
                 }
             }
         )

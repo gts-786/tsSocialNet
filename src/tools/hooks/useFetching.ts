@@ -14,5 +14,5 @@ export const useFetching = (callback: ()=>void) => {
         setIsLoading(false)
     }
 }
-    return [fetching, isLoading, error]
+    return [fetching, isLoading, error] as const
 }

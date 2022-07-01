@@ -20,7 +20,7 @@ const PostIdPage: FC = () => {
     }, [])
     return (
         <div>
-            {post.id}. {post.title} <br/> {post.body}
+            <h2>Post №{post.id}. <br/>{post.title}</h2> <br/> {post.body}
         </div>
     );
 };
