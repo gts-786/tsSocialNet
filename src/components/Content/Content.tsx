@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Error from '../Error';
 import Hello from '../Hello';
+import Login from '../Login/Login';
 import classes from './Content.module.css'
 import Dialogs from './Messages/Dialogs/Dialogs';
 import Messages from './Messages/Messages';
@@ -10,7 +11,9 @@ import PostIdPage from './Profile/Posts/PostIdPage';
 import Profile from './Profile/Profile';
 
 const Content:FC = () => {
+    const isAuth = false;
     return (
+        isAuth ?
         <div className={classes.content}>
             <Routes>
                 <Route path='/profile/' element={<Profile/>}/>
@@ -24,6 +27,11 @@ const Content:FC = () => {
                 <Route path='/' element={<Hello/>}/> 
             </Routes>
         </div>
+        :
+        <Routes>
+            <Route path='/login' element={<Login/>} />
+            <Route path='*' element={<Login/>} />
+        </Routes>
     );
 };
 export default Content;
