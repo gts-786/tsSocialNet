@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useAppSelector } from '../../tools/hooks/redux';
 import Error from '../Error';
 import Hello from '../Hello';
 import Login from '../Login/Login';
@@ -11,7 +12,7 @@ import PostIdPage from './Profile/Posts/PostIdPage';
 import Profile from './Profile/Profile';
 
 const Content:FC = () => {
-    const isAuth = false;
+    const {isAuth} = useAppSelector(state=> state.authReducer);
     return (
         isAuth ?
         <div className={classes.content}>
