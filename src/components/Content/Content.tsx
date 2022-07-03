@@ -1,5 +1,7 @@
 import { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Error from '../Error';
+import Hello from '../Hello';
 import classes from './Content.module.css'
 import Dialogs from './Messages/Dialogs/Dialogs';
 import Messages from './Messages/Messages';
@@ -18,7 +20,8 @@ const Content:FC = () => {
                 <Route path='/messages/' element={<Messages/>}/>
                 <Route path='/photos' element={<Photos/>} />
                 <Route path='/messages/roman' element={<Dialogs/>}/>
-                <Route path='*' element={<Profile/>}/> 
+                <Route path='*' element={<Error/>}/> 
+                <Route path='/' element={<Hello/>}/> 
             </Routes>
         </div>
     );
