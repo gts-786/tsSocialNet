@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Content from './components/Content/Content';
-import Error from './components/Error';
+import Error from './components/Common/Error';
 import Header from './components/Header/Header';
-import Login from './components/Login/Login';
+import Login from './components/Common/Login/Login';
 import Sidebar from './components/Sidebar/Sidebar';
 import { authSlice } from './redux/AuthSlice';
 import { useAppDispatch, useAppSelector } from './tools/hooks/redux';
@@ -28,13 +28,11 @@ function App() {
       </BrowserRouter>
       :
       <BrowserRouter>
-        <div className="AppAuth">
-          <div>
+        <div>
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='*' element={<Error />} />
           </Routes>
-          </div>
         </div>
       </BrowserRouter>
   );

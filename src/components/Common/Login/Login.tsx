@@ -1,7 +1,8 @@
-import { authSlice } from "../../redux/AuthSlice";
-import { useAppDispatch, useAppSelector } from "../../tools/hooks/redux";
-import MyButton from "../UI/MyButton/MyButton";
-import MyInput from "../UI/MyInput/MyInput";
+import { authSlice } from "../../../redux/AuthSlice";
+import { useAppDispatch } from "../../../tools/hooks/redux";
+import MyButton from "../../UI/MyButton/MyButton";
+import MyInput from "../../UI/MyInput/MyInput";
+import classes from "./Login.module.css"
 
 const Login = () => {
     const dispatch = useAppDispatch();
@@ -11,7 +12,7 @@ const Login = () => {
         localStorage.setItem('auth', 'true');
     }
     return (
-        <div>
+        <div className={classes.auth}>
             <h3>Для входа в социальную сеть введите логин и пароль</h3>
             <form onSubmit={login}>
                 <MyInput type='text' placeholder='Input your test login (any)'/>

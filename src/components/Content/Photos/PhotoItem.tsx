@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 import { IPhoto } from "../../../tools/models/IPhoto";
 
 interface PhotoItemProps {
@@ -6,9 +7,12 @@ interface PhotoItemProps {
 }
 
 const PhotoItem: FC<PhotoItemProps> = ({photo}) => {
+    const router = useNavigate()
     return (
         <div>
-            <img src={photo.thumbnailUrl} alt='picture' /> <br/>{photo.title} 
+            <img src={photo.thumbnailUrl} alt='picture' 
+            onClick={()=>router(`/photos/${photo.id}`)} /> 
+            <br/>{photo.title} 
         </div>
     );
 };
