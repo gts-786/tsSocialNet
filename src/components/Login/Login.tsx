@@ -12,10 +12,10 @@ const Login = () => {
     }
     return (
         <div>
-            <h1>Page for login</h1>
+            <h3>Для входа в социальную сеть введите логин и пароль</h3>
             <form onSubmit={login}>
-                <MyInput type='text' placeholder='Input login'/>
-                <MyInput type='password' placeholder='Input password'/><br/>
+                <MyInput type='text' placeholder='Input your test login (any)'/>
+                <MyInput type='password' placeholder='Input your test password (any)'/><br/>
                 <MyButton>Log in my social network</MyButton>
             </form>
         </div>
