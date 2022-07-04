@@ -1,10 +1,7 @@
-import axios from "axios";
 import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchPostsById } from "../../../../redux/ActionCreator";
 import { useAppDispatch } from "../../../../tools/hooks/redux";
-import { IPost } from "../../../../tools/models/IPost";
-import Loader from "../../../UI/Loader/Loader";
 
 const PostIdPage: FC = () => {
     const dispatch = useAppDispatch();
@@ -20,7 +17,7 @@ const PostIdPage: FC = () => {
     }, [])
     return (
         <div>
-            <h2>Post №{post.id}. <br/>{post.title}</h2> <br/> {post.body}
+            <h2>Post {post.id}. <br/>{post.title}</h2> <br/> {post.body}
         </div>
     );
 };
