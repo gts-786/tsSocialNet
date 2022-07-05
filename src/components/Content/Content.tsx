@@ -5,6 +5,7 @@ import Hello from '../Common/Hello';
 import Login from '../Common/Login/Login';
 import classes from './Content.module.css'
 import ErrorPage from './ErrorPage';
+import Friends from './Friends/Friends/Friends';
 import Dialogs from './Messages/Dialogs/Dialogs';
 import Messages from './Messages/Messages';
 import PhotoIdPage from './Photos/PhotoIdPage';
@@ -23,6 +24,7 @@ const Content:FC = () => {
                     <Route path=':id' element={<PostIdPage/>}/>
                 </Route>
                 <Route path='/messages/' element={<Messages/>}/>
+                <Route path='/friends' element={<Friends/>}/>
                 <Route path='/photos' element={<Photos/>} />
                 <Route path='photos'>
                     <Route path=':id' element={<PhotoIdPage/>}/>
