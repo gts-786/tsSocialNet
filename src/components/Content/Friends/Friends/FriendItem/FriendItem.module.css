@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+    margin: 20px;
+    font-family: serif;
+    font-size: 20px;
+    text-align: left;
+    align-items: center;
+}
+.img {
+    border-radius: 70px;
+}
+.friend {
+    padding: 15px;
+}
+.name {
+    font-size: 24px;
+}
+.city {
+    padding: 10px 0;
+}

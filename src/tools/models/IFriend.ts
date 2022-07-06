@@ -3,5 +3,5 @@ export interface IFriend {
     name: string;
     city: string;
     age: number;
-    image: any;
+    image: string;
 }
