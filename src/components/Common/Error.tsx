@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 
-const Error = () => {
+const Error: FC = () => {
     return (
         <div style={{textAlign: 'center'}}>
             <h2>A page with this path not found</h2>

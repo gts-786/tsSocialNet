@@ -5,6 +5,7 @@ import Hello from '../Common/Hello';
 import Login from '../Common/Login/Login';
 import classes from './Content.module.css'
 import ErrorPage from './ErrorPage';
+import FriendsItemMessages from './Friends/Friends/FriendItem/FriendsItemMessages/FriendsItemMessages';
 import Friends from './Friends/Friends/Friends';
 import Dialogs from './Messages/Dialogs/Dialogs';
 import Messages from './Messages/Messages';
@@ -15,6 +16,7 @@ import Profile from './Profile/Profile';
 
 const Content:FC = () => {
     const {isAuth} = useAppSelector(state=> state.authReducer);
+    const {friends} = useAppSelector(state => state.friendReducer);
     return (
         isAuth ?
         <div className={classes.content}>
@@ -25,6 +27,9 @@ const Content:FC = () => {
                 </Route>
                 <Route path='/messages/' element={<Messages/>}/>
                 <Route path='/friends' element={<Friends/>}/>
+                <Route path='friends'>
+                    <Route path=':name' element={<FriendsItemMessages friends={friends}/>}/>    
+                </Route>
                 <Route path='/photos' element={<Photos/>} />
                 <Route path='photos'>
                     <Route path=':id' element={<PhotoIdPage/>}/>

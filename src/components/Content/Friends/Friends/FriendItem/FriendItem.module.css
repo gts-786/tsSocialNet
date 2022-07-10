@@ -4,10 +4,18 @@
     font-family: serif;
     font-size: 20px;
     text-align: left;
-    align-items: center;
 }
 .img {
     border-radius: 70px;
+    width: 100px;
+    height: 100px;
+}
+.nav{
+    text-decoration: none;
+    border: 3px solid lime;
+    padding: 5px;
+    color: black;
+    width: 100px;
 }
 .friend {
     padding: 15px;
