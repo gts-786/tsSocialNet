@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import QueryPhotos from "../../../server/QueryPhotos";
 import { useFetching } from "../../../tools/hooks/useFetching";
 import { useObserver } from "../../../tools/hooks/useObserver";
@@ -8,7 +8,7 @@ import Loader from "../../UI/Loader/Loader";
 import PhotoItem from "./PhotoItem";
 import classes from "./Photos.module.css"
 
-const Photos = () => {
+const Photos: FC = () => {
     const [photos, setPhotos] = useState<IPhoto[]>([])
     const [totalPages, setTotalPages] = useState<number>(0)
     const [limit, setLimit] = useState<number>(20)

@@ -15,7 +15,7 @@ const PostIdPage: FC = () => {
 
     useEffect(() => {
         fetchPostId()
-    }, [])
+    })
     return (
         <div>
             <h2>Post {post.id}. <br/>{post.title}</h2> <br/> {post.body}
