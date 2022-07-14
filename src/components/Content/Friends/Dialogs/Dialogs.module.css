@@ -9,3 +9,8 @@
     width: 100px;
     border-radius: 100px;
 }
+
+.form {
+    align-items: center;
+    margin-top: 200px;
+}

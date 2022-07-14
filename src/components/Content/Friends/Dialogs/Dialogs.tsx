@@ -1,4 +1,3 @@
-import { useAppSelector } from "../../../../tools/hooks/redux";
 import FormMessage from "./FormMessage";
 import classes from "./Dialogs.module.css";
 import { FC } from "react";
@@ -8,7 +7,6 @@ interface DialogsProps {
 }
 
 const Dialogs: FC<DialogsProps> = ({dialogUser}) => {
-    const { messages } = useAppSelector(state => state.messageReducer)
     return (
         <div className={classes.dialogs}>
             <div>
@@ -16,10 +14,14 @@ const Dialogs: FC<DialogsProps> = ({dialogUser}) => {
                 <div>{dialogUser.name}</div>
             </div>
             <div>
-                {messages.map(message => <div key={message.id}>{message.message}</div>)}
+            {dialogUser.messages.length === 0
+                ?
+                <h4>Сообщений нет</h4>
+                :
+                dialogUser.messages.map((message: any) => <div key={message.id}>{message.message}</div>)}
             </div>
             <div></div>
-            <div>
+            <div className={classes.form}>
                 <FormMessage/>
             </div>      
         </div>
