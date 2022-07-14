@@ -5,7 +5,7 @@ const Friends = () => {
     const {friends} = useAppSelector(state => state.friendReducer) 
     return (
         <div>
-            {friends.map((friend) => <FriendItem friend={friend}/>)}
+            {friends.map((friend) => <FriendItem key={friend.id} friend={friend}/>)}
         </div>
     );
 };

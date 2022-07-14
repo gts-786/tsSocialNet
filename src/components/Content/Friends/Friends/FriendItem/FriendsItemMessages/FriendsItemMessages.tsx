@@ -1,16 +1,24 @@
 import { FC } from "react";
 import { IFriend } from "../../../../../../tools/models/IFriend";
-import FriendItem from "../FriendItem";
+import Dialogs from "../../../Dialogs/Dialogs";
 
 interface FriendsItemMessagesProps {
     friends: IFriend[];
 }
 const FriendsItemMessages: FC<FriendsItemMessagesProps> = ({friends}) => {
-    let name = friends.map((friend) => friend.name)
+    const openMessageFunc = () => {
+        for (let i = 0; i < friends.length; i++) {
+            let userName = friends[i].name;
+            if (window.location.pathname===`/friends/${userName}`){
+                return (friends[i])
+            }
+        }
+    }
+    let dialogUser = openMessageFunc();
+
     return (
         <div>
-            Here Logic opening messages <br/>
-            {name}
+            <Dialogs dialogUser={dialogUser}/>  
         </div>
     );
 };

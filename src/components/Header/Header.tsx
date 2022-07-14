@@ -12,7 +12,7 @@ const Header = () => {
     }
     return (
         <div className={classes.header}>
-            <div>Сделать списки пользователей для сообщений и открытия окна диалогов с ними</div>
+            <div>Навести красоту</div>
             <div>Сделать интернет-магазин и чат</div>
             <div>Добавить максимум типизации+фото в диалогах и профиле</div>
             <NavLink to='/' onClick={logout}>LogOut</NavLink>
