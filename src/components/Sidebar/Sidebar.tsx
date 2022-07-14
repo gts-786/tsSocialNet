@@ -1,7 +1,8 @@
+import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './Sidebar.module.css'
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
     return (
         <div className={classes.sidebar}>
             <div><NavLink to='/profile' className={ n => n.isActive ? classes.active : classes.ref }>Profile</NavLink></div>

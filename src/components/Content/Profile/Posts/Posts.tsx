@@ -16,10 +16,10 @@ interface PostsProps {
 const Posts: FC<PostsProps> = () => {
     const { posts, isLoading, error } = useAppSelector(state => state.postReducer);
     const dispatch = useAppDispatch();
-    const [totalPages, setTotalPages] = useState(2);
-    const [limit, setLimit] = useState(10);
-    const [page, setPage] = useState(0);
-    let pagesArray = getPagesArray(totalPages);
+    const [totalPages, setTotalPages] = useState<number>(2);
+    const [limit, setLimit] = useState<number>(10);
+    const [page, setPage] = useState<number>(0);
+    let pagesArray: number[] = getPagesArray(totalPages);
 
     const changePage = (page: number) => {
         setPage(page);
