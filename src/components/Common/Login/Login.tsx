@@ -1,12 +1,13 @@
+import { FC } from "react";
 import { authSlice } from "../../../redux/AuthSlice";
 import { useAppDispatch } from "../../../tools/hooks/redux";
 import MyButton from "../../UI/MyButton/MyButton";
 import MyInput from "../../UI/MyInput/MyInput";
 import classes from "./Login.module.css"
 
-const Login = () => {
+const Login: FC = () => {
     const dispatch = useAppDispatch();
-    const login = (event:any) => {
+    const login = (event: any) => {
         event.preventDefault();
         dispatch(authSlice.actions.trueAuth());
         localStorage.setItem('auth', 'true');

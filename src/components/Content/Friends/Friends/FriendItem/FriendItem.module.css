@@ -1,0 +1,28 @@
+.item {
+    display: flex;
+    margin: 20px;
+    font-family: serif;
+    font-size: 20px;
+    text-align: left;
+}
+.img {
+    border-radius: 70px;
+    width: 100px;
+    height: 100px;
+}
+.nav{
+    text-decoration: none;
+    border: 3px solid lime;
+    padding: 5px;
+    color: black;
+    width: 100px;
+}
+.friend {
+    padding: 15px;
+}
+.name {
+    font-size: 24px;
+}
+.city {
+    padding: 10px 0;
+}

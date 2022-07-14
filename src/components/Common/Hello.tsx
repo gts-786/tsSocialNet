@@ -1,4 +1,6 @@
-const Hello = () => {
+import { FC } from "react";
+
+const Hello: FC = () => {
     return (
         <div>
             <h2>Здравствуйте! 
