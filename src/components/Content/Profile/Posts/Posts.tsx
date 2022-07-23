@@ -31,13 +31,11 @@ const Posts: FC<PostsProps> = () => {
     return (
         <div className={classes.posts}>
             {isLoading && <h1>Loading...</h1>}
-            {pagesArray.map(n =>
-                <MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton>)}
             {error && <h2>{error}</h2>}
             {posts.length === 0
                 ?
                 <h2>Постов нет</h2>
-                : <div>
+                : <div> <h3>Ниже реализован механизм подгрузки постов с сервера с постраничной навигацией и возможностью перехода на страничку поста. Также есть возможность удалять и добавлять посты.</h3>
                     {posts.map((post) =>
                         <div key={post.id}>
                             <Post post={post} />
@@ -47,6 +45,8 @@ const Posts: FC<PostsProps> = () => {
                         </div>)}
                 </div>}
             <PostForm />
+            {pagesArray.map(n =>
+                <span className={classes.page}><MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton></span>)}
         </div>
     );
 };
