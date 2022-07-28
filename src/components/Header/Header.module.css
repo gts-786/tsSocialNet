@@ -1,6 +1,20 @@
 .header {
-  background-color: blanchedalmond;
+  background-color: whitesmoke;
   grid-area: header;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+  padding: 15px 0px;
+  justify-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: coral;
+  padding: 10px;
+  border: 3px solid coral;
+  border-radius: 100px;
+  width: 45px;
+  justify-content: center;
 }

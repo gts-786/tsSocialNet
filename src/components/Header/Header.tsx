@@ -12,9 +12,8 @@ const Header: FC = () => {
     }
     return (
         <div className={classes.header}>
-            <div>Навести красоту</div>
-            <div>Сделать интернет-магазин и чат</div>
-            <div>Типизация Header, Login, Friends, Photos</div>
+            <div className={classes.logo}>MRV</div>
+            <div>sdf</div>
             <NavLink to='/' onClick={logout}>LogOut</NavLink>
         </div>
     );

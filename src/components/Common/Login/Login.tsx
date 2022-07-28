@@ -7,7 +7,7 @@ import classes from "./Login.module.css"
 
 const Login: FC = () => {
     const dispatch = useAppDispatch();
-    const login = (event: any) => {
+    const login = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         dispatch(authSlice.actions.trueAuth());
         localStorage.setItem('auth', 'true');

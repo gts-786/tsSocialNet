@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchPhotoById } from "../../../redux/ActionCreator";
 import { useAppDispatch } from "../../../tools/hooks/redux";
 
-const PhotoIdPage = () => {
+const PhotoIdPage: FC = () => {
     const dispatch = useAppDispatch();
     const params = useParams();
     const [photo, setPhoto] = useState({url:''});
