@@ -5,7 +5,7 @@ import MyButton from "../../../UI/MyButton/MyButton";
 import MyInput from "../../../UI/MyInput/MyInput";
 
 const FormMessage = () => {
-    const [message, setMessage] = useState ('')
+    const [message, setMessage] = useState<string>('')
     const dispatch = useAppDispatch()
     const sendMessage = () => {
         dispatch(friendSlice.actions.sendMessage({id: Date.now(), message}))

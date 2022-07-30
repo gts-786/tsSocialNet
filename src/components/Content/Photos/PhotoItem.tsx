@@ -10,7 +10,7 @@ const PhotoItem: FC<PhotoItemProps> = ({photo}) => {
     const router = useNavigate()
     return (
         <div>
-            <img src={photo.thumbnailUrl} alt='picture' 
+            <img style={{cursor: 'pointer'}} src={photo.thumbnailUrl} alt='square' 
             onClick={()=>router(`/photos/${photo.id}`)} /> 
             <br/>{photo.title} 
         </div>

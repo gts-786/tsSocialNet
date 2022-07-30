@@ -1,7 +1,7 @@
 .auth {
     width: 500px;
     text-align: center;
-    border: 3px solid lime;
-    background-color: bisque;
+    border: 3px solid coral;
+    background-image: linear-gradient(white, deepskyblue, white);
     margin: 100px auto;
   }

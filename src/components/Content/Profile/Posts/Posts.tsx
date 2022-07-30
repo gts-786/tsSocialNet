@@ -16,28 +16,26 @@ interface PostsProps {
 const Posts: FC<PostsProps> = () => {
     const { posts, isLoading, error } = useAppSelector(state => state.postReducer);
     const dispatch = useAppDispatch();
-    const [totalPages, setTotalPages] = useState(2);
-    const [limit, setLimit] = useState(10);
-    const [page, setPage] = useState(0);
-    let pagesArray = getPagesArray(totalPages);
+    const [totalPages, setTotalPages] = useState<number>(2);
+    const [limit, setLimit] = useState<number>(10);
+    const [page, setPage] = useState<number>(0);
+    let pagesArray: number[] = getPagesArray(totalPages);
 
     const changePage = (page: number) => {
         setPage(page);
     }
     useEffect(() => {
         dispatch(fetchPosts(limit, page, setTotalPages));
-    }, [ page ]);
+    }, [page]);
 
     return (
         <div className={classes.posts}>
             {isLoading && <h1>Loading...</h1>}
-            {pagesArray.map(n =>
-                <MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton>)}
             {error && <h2>{error}</h2>}
             {posts.length === 0
                 ?
                 <h2>Постов нет</h2>
-                : <div>
+                : <div> <h3 style={{ textAlign: 'center' }}>Ниже реализован механизм подгрузки постов с сервера с постраничной навигацией и возможностью перехода на страничку поста. Также есть возможность удалять и добавлять посты.</h3>
                     {posts.map((post) =>
                         <div key={post.id}>
                             <Post post={post} />
@@ -47,6 +45,10 @@ const Posts: FC<PostsProps> = () => {
                         </div>)}
                 </div>}
             <PostForm />
+            <div className={classes.page}>
+                {pagesArray.map(n =>
+                    <MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton>)}
+            </div>
         </div>
     );
 };

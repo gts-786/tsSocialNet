@@ -1,7 +1,8 @@
+import { FC } from "react";
 import { useAppSelector } from "../../../../tools/hooks/redux";
 import FriendItem from "./FriendItem/FriendItem";
 
-const Friends = () => {
+const Friends: FC = () => {
     const {friends} = useAppSelector(state => state.friendReducer) 
     return (
         <div>

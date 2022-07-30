@@ -32,7 +32,3 @@ export const fetchPhotoById = (id: any) => async () => {
     const response = await axios.get(`https://jsonplaceholder.typicode.com/photos/${id}`)
     return (response.data);
 }
-
-/* export const addPost = (dispatch: AppDispatch, title: string, body: string) => {
-    dispatch(postSlice.actions.addPost({id: Date.now(), title, body}))
-}  */
