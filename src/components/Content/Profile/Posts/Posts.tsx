@@ -26,7 +26,7 @@ const Posts: FC<PostsProps> = () => {
     }
     useEffect(() => {
         dispatch(fetchPosts(limit, page, setTotalPages));
-    }, [ page ]);
+    }, [page]);
 
     return (
         <div className={classes.posts}>
@@ -35,7 +35,7 @@ const Posts: FC<PostsProps> = () => {
             {posts.length === 0
                 ?
                 <h2>Постов нет</h2>
-                : <div> <h3>Ниже реализован механизм подгрузки постов с сервера с постраничной навигацией и возможностью перехода на страничку поста. Также есть возможность удалять и добавлять посты.</h3>
+                : <div> <h3 style={{ textAlign: 'center' }}>Ниже реализован механизм подгрузки постов с сервера с постраничной навигацией и возможностью перехода на страничку поста. Также есть возможность удалять и добавлять посты.</h3>
                     {posts.map((post) =>
                         <div key={post.id}>
                             <Post post={post} />
@@ -45,8 +45,10 @@ const Posts: FC<PostsProps> = () => {
                         </div>)}
                 </div>}
             <PostForm />
-            {pagesArray.map(n =>
-                <span className={classes.page}><MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton></span>)}
+            <div className={classes.page}>
+                {pagesArray.map(n =>
+                    <MyButton key={n} onClick={() => { changePage(n) }}>{n}</MyButton>)}
+            </div>
         </div>
     );
 };

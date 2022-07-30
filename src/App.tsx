@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Content from './components/Content/Content';
 import Error from './components/Common/Error';
 import Header from './components/Header/Header';
 import Login from './components/Common/Login/Login';
-import Sidebar from './components/Sidebar/Sidebar';
 import { authSlice } from './redux/AuthSlice';
 import { useAppDispatch, useAppSelector } from './tools/hooks/redux';
 
@@ -22,7 +21,6 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <Header />
-          <Sidebar />
           <Content />
         </div>
       </BrowserRouter>

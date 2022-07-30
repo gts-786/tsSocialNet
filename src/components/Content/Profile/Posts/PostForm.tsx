@@ -14,7 +14,7 @@ const PostForm: FC = () => {
     } 
 
     return (
-        <div>
+        <div style={{textAlign: 'center'}}>
             <MyInput
                 placeholder='Write your title post'
                 value={post.title}

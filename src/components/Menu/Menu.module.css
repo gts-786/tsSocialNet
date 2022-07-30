@@ -1,0 +1,18 @@
+.menu {
+    grid-area: sidebar;
+
+    font-family: serif;
+    font-size: 32px;
+}
+
+.ref {
+    text-decoration: none;
+    color: coral;
+}
+
+.active {
+    font-size: 46px;
+    text-decoration: none;
+    color: coral;
+    font-weight: bold;
+}
