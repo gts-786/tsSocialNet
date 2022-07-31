@@ -4,9 +4,9 @@ import classes from './Description.module.css'
 const Description: FC = () => {
     return (
         <div className={classes.description}>
-            <h2>Маркович Роман</h2>
-            <h4>Возраст: 31 год</h4>
-            <h4>Место рождения: Красноярск</h4>
+            <h2>Markovich Roman</h2>
+            <h4>Age: 31 years</h4>
+            <h4>Birthplace: Krasnoyarsk</h4>
         </div>
     );
 };

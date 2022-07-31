@@ -9,7 +9,7 @@ const FriendsItemMessages: FC<FriendsItemMessagesProps> = ({friends}) => {
     const openMessageFunc = () => {
         for (let i = 0; i < friends.length; i++) {
             let userName = friends[i].name;
-            if (window.location.pathname===`/friends/${userName}`){
+            if (window.location.pathname===`/friends/${userName}/Dialog`){
                 return (friends[i])
             }
         }

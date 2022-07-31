@@ -9,12 +9,18 @@ interface FriendItemProps {
 const FriendItem: FC<FriendItemProps> = ({ friend }) => {
     return (
         <div className={classes.item}>
-            <div><img src={friend.image} className={classes.img} /></div>
+            <div>
+                <NavLink to={friend.name}>
+                    <img src={friend.image} className={classes.img} />
+                </NavLink>
+            </div>
             <div className={classes.friend}>
                 <div className={classes.name}>{friend.name}, {friend.age} years</div>
                 <div className={classes.city}>{friend.city}</div>
             </div>
-            <div className={classes.align}><NavLink to={friend.name} className={classes.nav}>Messages</NavLink></div>
+            <div className={classes.align}>
+                <NavLink to={friend.name+'/Dialog'} className={classes.nav}>Messages</NavLink>
+            </div>
         </div>
     );
 };
