@@ -30,6 +30,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='*' element={<Error />} />
+            <Route path='/tsSocialNet' element={<Login/>} />
           </Routes>
         </div>
       </BrowserRouter>
