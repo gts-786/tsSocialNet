@@ -19,3 +19,26 @@
     padding-right: 2em;
     margin-top: 1.2em;
 }
+.ava {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+}
+.post {
+    display: flex;
+    margin: 1.5em auto;
+}
+.title {
+    font-size: 24px;
+    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+.body {
+    padding: 1.2em;
+    letter-spacing: 1px;
+}
+.page {
+    display: flex;
+    justify-content: space-around;
+}

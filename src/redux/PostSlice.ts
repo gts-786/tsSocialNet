@@ -8,7 +8,8 @@ interface PostState {
 }
 
 const initialState: PostState = {
-    posts: [],
+    posts: [{id: 1, title: 'The world is wonderful!', body: 'Today is sunny day. The weather is georgeous!'},
+    {id: 2, title: 'The green is my favorite color.', body: 'It color has link with nature. Many people like this color and I understand their. Blue is beautiful color too. The sky has this. Tommorow will be sunny day. The weather will be georgeous.'},],
     isLoading: false,
     error: '',
 }

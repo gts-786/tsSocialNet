@@ -13,6 +13,7 @@
 .post {
     display: flex;
     cursor: pointer;
+    margin-bottom: 0.3em;
 }
 .title {
     font-size: 24px;
