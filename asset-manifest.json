@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/tsSocialNet/static/css/main.f5549916.css",
+    "main.js": "/tsSocialNet/static/js/main.352b7fd4.js",
+    "static/media/ava.png": "/tsSocialNet/static/media/ava.1c5aa88477e052251d63.png",
+    "index.html": "/tsSocialNet/index.html",
+    "main.f5549916.css.map": "/tsSocialNet/static/css/main.f5549916.css.map",
+    "main.352b7fd4.js.map": "/tsSocialNet/static/js/main.352b7fd4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5549916.css",
+    "static/js/main.352b7fd4.js"
+  ]
+}
