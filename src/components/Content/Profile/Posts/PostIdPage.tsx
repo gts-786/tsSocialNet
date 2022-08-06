@@ -1,24 +1,17 @@
-import { FC, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { fetchPostsById } from "../../../../redux/ActionCreator";
-import { useAppDispatch } from "../../../../tools/hooks/redux";
+import { FC } from "react";
+import { useAppSelector } from "../../../../tools/hooks/redux";
 import { IPost } from "../../../../tools/models/IPost";
+import classes from './Posts.module.css';
 
 const PostIdPage: FC = () => {
-    const dispatch = useAppDispatch();
-    const params = useParams();
-    const [post, setPost] = useState<IPost>({id: 0, title: '', body: ''})
-    const fetchPostId = async () => {
-        const response = await dispatch(fetchPostsById(params.id));
-        setPost(response)
-    }
+    const { posts } = useAppSelector(state => state.postReducer);
+    const post: IPost | undefined = posts.find(item => item.id === Number((window.location.pathname).slice(9)))
 
-    useEffect(() => {
-        fetchPostId()
-    })
     return (
         <div>
-            <h2>Post {post.id}. <br/>{post.title}</h2> <br/> {post.body}
+            <img src='/images/ava.png' alt='Avatar' className={classes.ava} />
+            <h4 style={{marginTop: '0'}}>Роман</h4> 
+            <h2>{post?.title}</h2> <br/> {post?.body}
         </div>
     );
 };
